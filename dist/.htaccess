@@ -1,0 +1,21 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /jobportal/dist/
+  
+  # If the request is not for an existing file or directory
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  # Route everything to index.html (for client-side routing)
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Optional: Set default charset
+AddDefaultCharset UTF-8
+
+# Optional: Prevent directory listing
+Options -Indexes
+
+# Optional: Cache static assets (CSS, JS, images)
+<FilesMatch "\.(css|js|jpg|jpeg|png|gif|ico|svg|woff|woff2|ttf|eot)$">
+  Header set Cache-Control "max-age=2592000, public"
+</FilesMatch>
