@@ -1,4 +1,4 @@
-name: Job Portal Deploy
+name: Project Deployment
 
 on:
   push:
