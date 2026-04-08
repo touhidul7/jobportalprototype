@@ -12,7 +12,7 @@ const navItems = [
   { id: "submit-student", label: "Student Submission" },
   { id: "assessment", label: "Job Assessment" },
   { id: "jobs", label: "Job Posting" },
-  { id: "students", label: "All Students" },
+  // { id: "students", label: "All Students" },
   { id: "process", label: "Process" },
   { id: "student-reg", label: "Register Student" },
 ];
